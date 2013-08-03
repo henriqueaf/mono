@@ -34,4 +34,7 @@ Mono::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Configure the mailer to create full URLs in emails
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
