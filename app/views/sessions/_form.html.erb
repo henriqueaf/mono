@@ -1,0 +1,21 @@
+<%= form_for :session, :url => session_path, :html => { :class => 'form-horizontal' } do |form| %>
+  <div class='control-group'>
+    <%= form.label :email, t('activerecord.attributes.user.email', :default => 'Email'), :class => 'control-label' %>
+    <div class="controls">
+      <%= form.text_field :email, :class => 'text_field input-large focus' %>
+    </div>
+  </div>
+
+  <div class='control-group'>
+    <%= form.label :password, t('activerecord.attributes.user.password', :default => 'Password'), :class => 'control-label' %>
+    <div class="controls">
+      <%= form.password_field :password, :class => 'text_field input-large' %>
+    </div>
+  </div>
+
+  <div class='form-actions'>
+    <%= form.submit t('helpers.links.enter', :default => 'Sign in'), :class => 'btn btn-primary', 'data-loading-text' => t('helpers.links.wait', :default => 'Wait...'), :id => 'submit' %>
+    <%= link_to t('helpers.links.cancel', :default => 'Cancel'), :root, :class => 'btn' %>
+  </div>
+
+<% end %>

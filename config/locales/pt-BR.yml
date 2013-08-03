@@ -134,6 +134,7 @@ pt-BR:
       update: Atualizar #%{model}
     actions: "Ações"
     links:
+      enter: "Entrar"
       edit: "Editar"
       destroy: "Excluir"
       confirm: "Você tem certeza?"
@@ -143,15 +144,19 @@ pt-BR:
       cancel: "Cancelar"
       close: "Fechar"
       ok: "OK"
+      wait: "Aguarde..."
       forgot_password: "Esqueceu a senha?"
       reset_password: "Resetar senha"
     titles:
       new: "Novo %{model}"
       edit: "Editar %{model}"
       sign_in: "Entrar"
-      sign_up: "Cadastro"
+      sign_up: "Cadastrar"
       reset_your_password: "Resetar senha"
       change_password: "Alterar senha"
+      manager: "Coordenador"
+      teacher: "Professor"
+      student: "Aluno"
     labels:
       current_password: "Senha atual"
       new_password: "Nova senha"
@@ -276,30 +281,6 @@ pt-BR:
         type: "Tipo"
         created_at: "Criado em"
         user_type: "Tipo"
-
-  clearance:
-    models:
-      clearance_mailer:
-        change_password: "Modifique seu password."
-        confirmation: "Confirmação de conta."
-
-    controllers:
-      confirmations:
-        confirmed_email: "Email confirmado e logado."
-
-      passwords:
-        deliver_change_password: "Você receberá um email em instantes. Nele contém as instruções para você mudar sua senha."
-        unknown_email: "Email incorreto."
-
-      sessions:
-        bad_email_or_password: "Email e/ou senha incorreto(s)."
-        unconfirmed_email: "Usuário não confirmou o email. Uma nova confirmação será enviada."
-
-      users:
-        deliver_confirmation: "Você receberá um email em instantes. Nele contém as instruções para você confirmar sua conta."
-
-      signed_in: "Logado"
-      signed_out: "Deslogado"
 
   cancan:
     user_types:

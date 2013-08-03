@@ -36,8 +36,35 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <noscript>
+                    <div class="alert">
+                        <strong>Atenção!</strong> Ative o JavaScript do seu navegador.
+                    </div>
+                </noscript>
 
-	<%= yield %>
+                <% flash.each do |type, message| %><!-- as classes de alert sao info, error e success -->
+                    <div class="alert alert-<%= type.to_s %>" id="flash">
+                        <a class="close" data-dismiss="alert">×</a>
+                        <%= message.html_safe %>
+                    </div>  
+                <% end %>
+
+                <div class="span12">
+                    <%= yield %>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class='footer'>
+            <div class='container'>
+              <p>&copy; Monografia 2013</p>
+            </div>
+        </footer>
+    </div> <!-- /container -->
 
 	<!-- Javascripts
 	================================================== -->
