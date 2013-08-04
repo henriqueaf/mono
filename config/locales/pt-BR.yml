@@ -157,6 +157,9 @@ pt-BR:
       manager: "Coordenador"
       teacher: "Professor"
       student: "Aluno"
+      managers: "Coordenadores"
+      teachers: "Professores"
+      students: "Alunos"
     labels:
       current_password: "Senha atual"
       new_password: "Nova senha"

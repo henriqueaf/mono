@@ -1,5 +1,16 @@
 Mono::Application.routes.draw do
   root :to => 'home#index'
+
+  get "managers_home/index"
+
+  get "teachers_home/index"
+
+  # scope '/managers' do
+    resources :students
+  # end
+
+  resources :managers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
