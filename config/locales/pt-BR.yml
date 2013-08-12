@@ -164,6 +164,8 @@ pt-BR:
       current_password: "Senha atual"
       new_password: "Nova senha"
       password_confirmation: "Confirme a senha"
+      email_already_exists: "Email já existe"
+      login_fail: "Email e/ou senha invalido(s)"
     
   number:
     currency:
@@ -249,6 +251,7 @@ pt-BR:
       messages:
         taken: "já está em uso"
         record_invalid: "A validação falhou: %{errors}"
+        blank: "Não pode ficar em branco"
 
       full_messages:
         format: "%{attribute} %{message}"

@@ -1,9 +1,11 @@
 Mono::Application.routes.draw do
-  root :to => 'home#index'
+  root :to => 'sessions#new'
 
-  get "managers_home/index"
+  resource :session, :only => :create
 
-  get "teachers_home/index"
+  get "managers_home/index", :as => :managers_home
+
+  get "teachers_home/index", :as => :teachers_home
 
   # scope '/managers' do
     resources :students

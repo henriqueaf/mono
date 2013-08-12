@@ -1,4 +1,5 @@
 class ManagersController < ApplicationController
+  before_filter :authenticate
 	
 	# GET /managers
   # GET /managers.json
