@@ -15,18 +15,21 @@ ActiveRecord::Schema.define(:version => 20130804163257) do
 
   create_table "managers", :force => true do |t|
     t.string   "address"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "students", :force => true do |t|
     t.string   "address"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "teachers", :force => true do |t|
     t.string   "address"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

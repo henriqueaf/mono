@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Criar Coordenador ADMIN
+puts "############################## Criando ADMIN ##############################"
+user = User.new(:email => 'henrique_af1@msn.com', :name => 'Henrique Almeida', :user_type => User::TYPES[:manager])
+user.update_password('1234')
+user.build_manager(:address => 'Filomeno Gomes')
+
+
+if user.save
+	puts "ADMIN criado com sucesso"
+else
+	puts "Erro ao criar admin: "
+	puts user.errors.full_messages
+end

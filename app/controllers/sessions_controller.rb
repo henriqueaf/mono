@@ -2,7 +2,7 @@ class SessionsController < Clearance::SessionsController
 	layout false
 
   def create
-  	user_type = case params[:commit].downcase.to_sym
+  	user_type = case params[:user_type].first.first.to_sym # Necessarios dois 'first' para acessar o parametro 'name' 
   	when :manager
   		User::TYPES[:manager]
   	when :teacher
@@ -11,11 +11,11 @@ class SessionsController < Clearance::SessionsController
   		User::TYPES[:student]
   	end
 
-  	user = User.authenticate(params[:email], params[:password], user_type)
+  	user = User.authenticate(params[:session][:email], params[:session][:password], user_type)
 
   	if user.blank?
   		flash[:error] = t('helpers.labels.login_fail', :default => 'Bad email or password')
-  		redirect_to :action => :new
+  		redirect_back_or :action => :new
   	else
   		sign_in(user)
   		redirect_to(url_after_create(user_type))

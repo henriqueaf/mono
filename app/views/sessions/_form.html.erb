@@ -13,8 +13,8 @@
     </div>
   </div>
 
-  <p><%= form.submit t('helpers.titles.manager', :default => 'Manager'), :id => 'manager', :class => 'btn btn-large btn-block btn-warning' %></p>
-  <p><%= form.submit t('helpers.titles.teacher', :default => 'Teacher'), :id => 'teacher', :class => 'btn btn-large btn-block btn-primary' %></p>
-  <p><%= form.submit t('helpers.titles.student', :default => 'Student'), :id => 'student', :class => 'btn btn-large btn-block btn-success' %></p>
+  <p><%= form.submit t('helpers.titles.manager', :default => 'Manager'), :name => "user_type[manager]", :class => 'btn btn-large btn-block btn-warning' %></p>
+  <p><%= form.submit t('helpers.titles.teacher', :default => 'Teacher'), :name => 'user_type[teacher]', :class => 'btn btn-large btn-block btn-primary' %></p>
+  <p><%= form.submit t('helpers.titles.student', :default => 'Student'), :name => 'user_type[student]', :class => 'btn btn-large btn-block btn-success' %></p>
 
 <% end %>

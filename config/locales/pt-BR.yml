@@ -160,13 +160,15 @@ pt-BR:
       managers: "Coordenadores"
       teachers: "Professores"
       students: "Alunos"
+      welcome: "Bem vindo(a)"
     labels:
       current_password: "Senha atual"
       new_password: "Nova senha"
       password_confirmation: "Confirme a senha"
       email_already_exists: "Email já existe"
       login_fail: "Email e/ou senha invalido(s)"
-    
+      authorize_page_error: "Faça login como %{user_type} para acessar essa página"
+      
   number:
     currency:
       format:
