@@ -16,9 +16,10 @@ jQuery ->
   })
 
   $('#submit').click( (e) =>
-    $('#submit').button('loading')
+    e.button('loading')
   )
 
   #setTimeout(( => $('.alert').fadeOut('slow') ), 3000)
   $('#flash').fadeOut(8000)
-  $('.focus').focus()
+  
+	$('.focus').focus()
